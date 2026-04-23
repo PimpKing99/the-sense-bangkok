@@ -34,11 +34,12 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1000;
-    background: var(--white);
+    background: rgba(20, 20, 20, 0.9);
     border-radius: 25px;
     padding: 8px;
-    box-shadow: 0 4px 12px var(--shadow);
-    border: 1px solid var(--light-brown);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .lang-btn {
@@ -51,26 +52,34 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .lang-btn:hover {
-    color: var(--dark-brown);
-    background: var(--cream);
+    color: #d4af37; /* Gold color */
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .lang-btn.active {
-    background: var(--medium-brown);
-    color: var(--white);
+    background: #d4af37; /* Gold color */
+    color: #000000;
+    font-weight: 600;
 }
 
 /* Header */
 header {
     padding: 60px 20px 40px;
     text-align: center;
-    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    background: 
+        linear-gradient(rgba(20, 20, 20, 0.85), rgba(30, 30, 30, 0.9)),
+        url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Larger header on desktop */
@@ -88,30 +97,35 @@ header {
 }
 
 .logo {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: var(--dark-brown);
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .logo span {
-    font-weight: 500;
-    color: var(--accent-brown);
+    font-weight: 700;
+    color: #d4af37; /* Gold color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .tagline {
-    font-size: 1.2rem;
-    color: var(--medium-brown);
-    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    letter-spacing: 2px;
     font-weight: 300;
-    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .location {
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -125,12 +139,14 @@ header {
 
 /* Navigation */
 nav {
-    background: var(--white);
-    border-bottom: 1px solid var(--light-brown);
+    background: rgba(20, 20, 20, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: sticky;
     top: 0;
     z-index: 999;
     padding: 0 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -150,7 +166,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
@@ -160,7 +176,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--accent-brown);
+    color: #d4af37; /* Gold color */
 }
 
 .nav-links a::after {
