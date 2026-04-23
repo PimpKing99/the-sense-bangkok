@@ -1363,17 +1363,30 @@
 
         // Set language
         function setLanguage(lang) {
+            console.log('Setting language to:', lang);
             currentLang = lang;
             
             // Update all elements with data-key attribute
-            document.querySelectorAll('[data-key]').forEach(element => {
+            const elements = document.querySelectorAll('[data-key]');
+            console.log('Found', elements.length, 'elements with data-key attribute');
+            
+            elements.forEach(element => {
                 const key = element.getAttribute('data-key');
+                console.log('Processing element with key:', key);
+                
                 if (translations[lang] && translations[lang][key]) {
+                    console.log('Found translation for', key, ':', translations[lang][key].substring(0, 50) + '...');
+                    
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.placeholder = translations[lang][key];
                     } else {
-                        element.textContent = translations[lang][key];
+                        // Use innerText instead of textContent for better handling of formatted text
+                        element.innerText = translations[lang][key];
                     }
+                    
+                    console.log('Updated element:', element);
+                } else {
+                    console.log('No translation found for key:', key, 'in language:', lang);
                 }
             });
             
@@ -1382,6 +1395,8 @@
             
             // Save language preference to localStorage
             localStorage.setItem('sense_language', lang);
+            
+            console.log('Language set to', lang, 'completed');
         }
 
         // Load gallery images
