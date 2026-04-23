@@ -76,20 +76,10 @@
         
         /* Header */
         header {
-            padding: 80px 20px 60px;
             text-align: center;
-            background: url('assets/images/header-bg.jpg') no-repeat center / cover;
-            background-position: center 30%;
             position: relative;
             overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10, 10, 10, 0.35);
-            pointer-events: none;
+            line-height: 0;
         }
         
         @media (min-width: 769px) {
@@ -99,26 +89,14 @@
         }
         
         .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+            width: 100%;
+            line-height: 0;
         }
         
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.2rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #f0e6d3;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        }
-        
-        .logo span {
-            font-weight: 700;
-            color: #d4af37;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        .header-logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         .location i {
@@ -547,7 +525,7 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <h1 class="logo">THE <span>SENSE</span></h1>
+            <img src="assets/images/header-bg.jpg" alt="THE SENSE Bangkok" class="header-logo-img">
         </div>
     </header>
     
