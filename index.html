@@ -76,25 +76,16 @@
         
         /* Header */
         header {
-            padding: 80px 20px 60px;
             text-align: center;
-            background: url('assets/images/header-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #f5f0e8;
             position: relative;
             overflow: hidden;
+            line-height: 0;
         }
         
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            right: 10%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+        .header-logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         @media (min-width: 769px) {
@@ -104,46 +95,14 @@
         }
         
         .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+            width: 100%;
+            line-height: 0;
         }
         
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #f5f0e8;
-            margin-bottom: 10px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        }
-        
-        .logo span {
-            font-weight: 700;
-            color: #d4af37;
-        }
-        
-        .tagline {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            color: rgba(245, 240, 232, 0.85);
-            margin-bottom: 15px;
-            letter-spacing: 3px;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-        
-        .location {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: rgba(245, 240, 232, 0.6);
-            margin-bottom: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+        .header-logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         .location i {
@@ -517,10 +476,7 @@
             header {
                 padding: 40px 20px 30px;
             }
-            
-            .logo {
-                font-size: 2.5rem;
-            }
+
             
             .nav-links {
                 gap: 20px;
@@ -547,10 +503,7 @@
             header {
                 padding: 30px 15px 20px;
             }
-            
-            .logo {
-                font-size: 2rem;
-            }
+
             
             .services-grid {
                 grid-template-columns: 1fr;
@@ -578,12 +531,7 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <h1 class="logo">THE <span>SENSE</span></h1>
-            <p class="tagline" data-key="tagline">Premium Nuru Massage Experience</p>
-            <div class="location">
-                <i class="fas fa-map-marker-alt"></i>
-                <span data-key="location">Bangkok, Thailand</span>
-            </div>
+            <img src="assets/images/header-bg.jpg" alt="THE SENSE Bangkok" class="header-logo-img">
         </div>
     </header>
     
