@@ -38,16 +38,15 @@
         
         /* Language Selector */
         .language-selector {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
             background: rgba(20, 20, 20, 0.9);
             border-radius: 25px;
-            padding: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 4px 8px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
+            flex-shrink: 0;
         }
         
         .lang-btn {
@@ -107,6 +106,9 @@
             padding: 0 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .nav-container {
@@ -116,6 +118,7 @@
             justify-content: center;
             align-items: center;
             height: 60px;
+            gap: 20px;
         }
         
         .nav-links {
@@ -515,6 +518,10 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding-bottom: 10px;
+            }
             .nav-links {
                 gap: 20px;
                 flex-wrap: wrap;
@@ -526,18 +533,21 @@
             }
             
             .language-selector {
-                top: 50%;
-                right: 4px;
-                transform: translateY(-50%);
-                flex-direction: column;
-                border-radius: 12px;
-                padding: 6px;
-                gap: 4px;
+                position: relative;
+                top: auto;
+                right: auto;
+                transform: none;
+                flex-direction: row;
+                border-radius: 25px;
+                padding: 6px 10px;
+                gap: 2px;
+                margin: 0 auto;
+                width: fit-content;
             }
             
             .lang-btn {
-                padding: 5px 8px;
-                font-size: 0.7rem;
+                padding: 4px 8px;
+                font-size: 0.75rem;
             }
         }
         
@@ -557,14 +567,6 @@
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="cn">中文</button>
-        <button class="lang-btn" data-lang="jp">日本語</button>
-        <button class="lang-btn" data-lang="kr">한국어</button>
-    </div>
-    
     <!-- Header -->
     <header>
         <div class="header-content">
@@ -582,6 +584,13 @@
                 <li><a href="#contact" data-key="nav_contact">Contact</a></li>
                 <li><a href="#messaging" data-key="nav_messaging">Message Us</a></li>
             </ul>
+        </div>
+        
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cn">中文</button>
+            <button class="lang-btn" data-lang="jp">日本語</button>
+            <button class="lang-btn" data-lang="kr">한국어</button>
         </div>
     </nav>
     
