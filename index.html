@@ -47,7 +47,6 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             flex-shrink: 0;
-            margin-left: auto;
         }
         
         .lang-btn {
@@ -116,6 +115,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            justify-content: center;
             align-items: center;
             height: 60px;
             gap: 20px;
@@ -126,8 +126,6 @@
             display: flex;
             list-style: none;
             gap: 40px;
-            flex: 1;
-            justify-content: center;
         }
         
         .nav-links a {
@@ -594,12 +592,13 @@
                 <li><a href="#contact" data-key="nav_contact">Contact</a></li>
                 <li><a href="#messaging" data-key="nav_messaging">Message Us</a></li>
             </ul>
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="cn">中文</button>
-                <button class="lang-btn" data-lang="jp">日本語</button>
-                <button class="lang-btn" data-lang="kr">한국어</button>
-            </div>
+        </div>
+        
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cn">中文</button>
+            <button class="lang-btn" data-lang="jp">日本語</button>
+            <button class="lang-btn" data-lang="kr">한국어</button>
         </div>
     </nav>
     
