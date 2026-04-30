@@ -549,6 +549,11 @@
                 padding: 4px 8px;
                 font-size: 0.75rem;
             }
+            
+            .philosophy-cards {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
         }
         
         @media (max-width: 480px) {
@@ -630,7 +635,7 @@
                         Our signature approach blends two complementary therapies:
                     </p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+                    <div class="philosophy-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
                         <div style="text-align: center; padding: 30px; background: var(--white); border-radius: 8px; border: 1px solid var(--light-brown);">
                             <div style="font-size: 2rem; color: var(--accent-brown); margin-bottom: 15px;">
                                 <i class="fas fa-hands"></i>
